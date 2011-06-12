@@ -1,0 +1,21 @@
+--- origsrc/libdbusmenu-qt-0.8.2/CMakeLists.txt	2011-04-12 07:28:50.000000000 -0500
++++ src/libdbusmenu-qt-0.8.2/CMakeLists.txt	2011-06-12 16:19:04.804304900 -0500
+@@ -71,6 +71,6 @@ if(WITH_DOC)
+         )
+ 
+     install(DIRECTORY ${CMAKE_BINARY_DIR}/html/
+-        DESTINATION share/doc/dbusmenu-qt
++        DESTINATION share/doc/libdbusmenu-qt/html/
+         )
+ endif(WITH_DOC)
+--- origsrc/libdbusmenu-qt-0.8.2/src/CMakeLists.txt	2011-04-12 07:28:50.000000000 -0500
++++ src/libdbusmenu-qt-0.8.2/src/CMakeLists.txt	2011-06-12 16:16:18.264815600 -0500
+@@ -73,6 +73,8 @@ target_link_libraries(dbusmenu-qt
+     )
+ 
+ install(TARGETS dbusmenu-qt
++    ARCHIVE DESTINATION lib${LIB_SUFFIX}
++    RUNTIME DESTINATION bin
+     LIBRARY DESTINATION lib${LIB_SUFFIX})
+ 
+ install(DIRECTORY .

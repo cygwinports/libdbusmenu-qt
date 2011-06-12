@@ -1,0 +1,7 @@
+category: KDE
+requires: libdbusmenu-qt2 libQtCore4-devel libQtDBus4-devel
+external-source: libdbusmenu-qt
+sdesc: "Qt DBusMenu implementation (development)"
+ldesc: "This library provides a Qt implementation of the DBusMenu protocol.
+The DBusMenu protocol makes it possible for applications to export and
+import their menus over DBus."
