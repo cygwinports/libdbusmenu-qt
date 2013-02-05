@@ -1,12 +1,20 @@
 inherit qt4-cmake
 
-DESCRIPTION="Qt DBusMenu implementation"
+NAME="libdbusmenu-qt"
+VERSION=0.9.2
+RELEASE=1
+CATEGORY="KDE"
+SUMMARY="Qt DBusMenu implementation"
+DESCRIPTION="This library provides a Qt implementation of the DBusMenu protocol.
+The DBusMenu protocol makes it possible for applications to export and import
+their menus over DBus."
 HOMEPAGE="https://launchpad.net/libdbusmenu-qt"
 SRC_URI="http://launchpad.net/libdbusmenu-qt/trunk/${PV}/+download/${P}.tar.bz2"
 PATCH_URI="0.8.2-install-dirs.patch"
 
 PKG_NAMES="${PN}2 ${PN}-devel"
 libdbusmenu_qt2_CONTENTS="usr/bin/cygdbusmenu-qt-2.dll"
+libdbusmenu_qt_devel_REQUIRES="libQtCore4-devel libQtDBus4-devel"
 libdbusmenu_qt_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/"
 
 CYGCMAKE_ARGS="-D__DBUSMENU_HAVE_GCC_VISIBILITY=OFF"
